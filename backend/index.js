@@ -7,6 +7,10 @@ const __dirname = path.resolve()
 const app = express()
 const port = 3000
 
+// Serve static files from 'files' folder (Change if needed)
+// Route to path is /images
+app.use('/images', express.static(path.join(__dirname, 'files')))
+
 // Cors config
 app.use(cors({ origin: '*' }))
 
